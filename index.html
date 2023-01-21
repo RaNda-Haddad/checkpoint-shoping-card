@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <title>Shoping card</title>
+</head>
+<body>
+<header>
+ <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Navbar</span>
+    </div>
+  </nav>
+</header>
+
+
+  <div class="total">
+    <span>Total Price: </span>
+    <span id="totalPrice"> 0 </span>
+    <span>$</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="cards">
+     <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvw_g4JvPignKACTotrqKWTfWOaUV40xZkAn9uR_s&s" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Parfum</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <i class="fa-solid fa-circle-plus"></i>
+              <span id="counter">0</span>
+              <i class="fa-solid fa-circle-minus"></i>   
+              <i class="fa-solid fa-trash"></i>
+              <i class="fa-solid fa-heart"></i>
+        
+              <span id="unit-price">200</span>
+              <span>$</span>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="data:image/jpeg;base64,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" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Sac</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <i class="fa-solid fa-circle-plus"></i>
+              <span id="counter">0</span>
+              <i class="fa-solid fa-circle-minus"></i> 
+              <i class="fa-solid fa-trash"></i>
+              <i class="fa-solid fa-heart"></i>
+              <span id="unit-price">250</span>
+              <span>$</span>
+          </div>
+          </div>
+        </div>
+      </div>
+     
+      
+     
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://fr.lzstatic.com/robe-de-soiree-a-devant-croise-en-jersey-1937057630-0-150-01.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Robe</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <i class="fa-solid fa-circle-plus"></i>
+              <span id="counter">0</span>
+              <i class="fa-solid fa-circle-minus"></i> 
+              <i class="fa-solid fa-trash"></i>
+              <i class="fa-solid fa-heart"></i>
+              <span id="unit-price">600</span>
+              <span>$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
